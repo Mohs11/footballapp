@@ -1,0 +1,70 @@
+:root {
+	--Championship: #44A7C7;
+	--Premier-League: #7D55A5;
+	--League-One: red;
+	--League-Two: #107cdf;
+	--National-League: orange;
+	--National-League-North: green;
+	--National-League-South: #ebb3f2;
+	--Northern-Premier-League: white;
+	--Womens-Super-League-One: purple;
+	--Womens-Super-League-Two: yellow;
+	--Serie-A: #9b2d22;
+	--Bundesliga: #5962a0;
+	--La-Liga: #e0c653;
+	--mainpink: #af4b60;
+	--mainblue: #353554;
+}
+
+h1 {
+  font-size: 18pt;
+  font-weight: 300;
+  margin-top: 3px;
+}
+
+ul {
+	padding-left: 0;
+}
+
+li {
+	list-style: none;
+  font-weight: 200;
+}
+
+.custom-card {
+  border: 5px solid white;
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+  background: #e5e5e5;
+  transition: 0.5s;
+  border-radius: 7px;
+}
+
+.clublogo {
+	width: 55px;
+	height: 55px;
+	float: right;
+	background: white;
+	margin-top: 5px;
+	border: 5px solid transparent;
+  border-radius: 10px;
+  text-align: right;
+}
+
+.staduim-icon {
+	margin-right: 2px;
+}
+
+.location-icon {
+	margin-right: 3px;
+	margin-left: 3px;
+}
+
+.capacity-icon {
+  margin-right: 3px;
+  margin-left: 2px;
+}
+
+.league-icon {
+  margin-right: 3px;
+}

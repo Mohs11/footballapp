@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="card custom-card col-4" *ngFor="let club of clubs">
+      <img class="clublogo" src="../../../assets/img/{{club.logo}}" alt="{{club.logo}}">
+    <h1>{{club.name}}</h1>
+    <ul>
+      <li><i class="fa fa-home staduim-icon"></i> {{club.ground}}</li>
+      <li><i class="fa fa-map-marker location-icon"></i> {{club.location}}</li>
+      <li><i class="fa fa-user capacity-icon"></i> {{club.capacity | number }}</li>
+      <li><i class="fa fa-trophy league"></i> {{club.league}}</li>
+    </ul>
+  </div>
+</div>
