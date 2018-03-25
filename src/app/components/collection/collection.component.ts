@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { DataService } from '../../service/data.service';
+import { Component, Input, OnInit, Pipe, PipeTransform } from '@angular/core';
 import { Club } from '../../modles/Clubs';
 
 @Component({
@@ -11,13 +10,12 @@ export class CollectionComponent implements OnInit {
   clubs: Club[];
 
   constructor() {
-
    }
 
   ngOnInit() {
     this.clubs =
     [
-            {
+       {
             logo: 'Tottenham Hotspur.png',
             name: 'Tottenham Hotspur',
             ground: 'Wembley Stadium',
@@ -2141,261 +2139,262 @@ export class CollectionComponent implements OnInit {
             ground: 'Butarque',
             location: 'Leganes',
             capacity: 11454,
-  league: 'La Liga',
-  color: 'La-Liga'
-},
-{
-  logo: 'Levante.png',
-  name: 'Levante',
-  ground: 'Ciutat de Valencia',
-  location: 'Valencia',
-  capacity: 26354,
-  league: 'La Liga',
-  color: 'La-Liga'
-},
-{
-  logo: 'Malaga.png',
-  name: 'Malaga',
-  ground: 'La Rosaleda',
-  location: 'Malaga',
-  capacity: 30044,
-  league: 'La Liga',
-  color: 'La-Liga'
-},
-{
-  logo: 'Real Betis.png',
-  name: 'Real Betis',
-  ground: 'Benito Villamarin',
-  location: 'Seville',
-  capacity: 60720,
-  league: 'La Liga',
-  color: 'La-Liga'
-},
-{
-  logo: 'Real Madrid.png',
-  name: 'Real Madrid',
-  ground: 'Santiago Bernabeu',
-  location: 'Madrid',
-  capacity: 81044,
-  league: 'La Liga',
-  color: 'La-Liga'
-},
-{
-  logo: 'Real Sociedad.png',
-  name: 'Real Sociedad',
-  ground: 'Anoeta',
-  location: 'San Sebastian',
-  capacity: 32000,
-  league: 'La Liga',
-  color: 'La-Liga'
-},
-{
-  logo: 'Sevilla.png',
-  name: 'Sevilla',
-  ground: 'Ramon Sanchez Pizjuan',
-  location: 'Seville',
-  capacity: 42714,
-  league: 'La Liga',
-  color: 'La-Liga'
-},
-{
-  logo: 'Valencia.png',
-  name: 'Valencia',
-  ground: 'Mestalla',
-  location: 'Valencia',
-  capacity: 49500,
-  league: 'La Liga',
-  color: 'La-Liga'
-},
-{
-  logo: 'Villarreal.png',
-  name: 'Villarreal',
-  ground: 'Estadio de la Ceramica',
-  location: 'Villarreal',
-  capacity: 24890,
-  league: 'La Liga',
-  color: 'La-Liga'
-},
-{
-  logo: 'Angers.png',
-  name: 'Angers',
-  ground: 'Angers',
-  location: 'Stade Raymond Kopa',
-  capacity: 17835,
-  league: 'Ligue 1',
-  color: 'Ligue-1'
-},
-{
-  logo: 'Bastia.png',
-  name: 'Bastia',
-  ground: 'Bastia',
-  location: 'Stade Armand Cesari',
-  capacity: 16480,
-  league: 'Ligue 1',
-  color: 'Ligue-1'
-},
-{
-  logo: 'Bordeaux.png',
-  name: 'Bordeaux',
-  ground: 'Bordeaux',
-  location: 'Matmut Atlantique',
-  capacity: 42115,
-  league: 'Ligue 1',
-  color: 'Ligue-1'
-},
-{
-  logo: 'Stade Malherbe Caen.png',
-  name: 'Stade Malherbe Caen',
-  ground: 'Stade Malherbe Caen',
-  location: 'Stade Michel d\'Ornano',
-  capacity: 20453,
-  league: 'Ligue 1',
-  color: 'Ligue-1'
-},
-{
-  logo: 'Dijon.png',
-  name: 'Dijon',
-  ground: 'Dijon',
-  location: 'Stade Gaston G\ufffdrard',
-  capacity: 16098,
-  league: 'Ligue 1',
-  color: 'Ligue-1'
-},
-{
-  logo: 'Guingamp.png',
-  name: 'Guingamp',
-  ground: 'Guingamp',
-  location: 'Stade du Roudourou',
-  capacity: 18126,
-  league: 'Ligue 1',
-  color: 'Ligue-1'
-},
-{
-  logo: 'Lille.png',
-  name: 'Lille',
-  ground: 'Villeneuve-d\'Ascq',
-  location: 'Stade Pierre-Mauroy',
-  capacity: 50186,
-  league: 'Ligue 1',
-  color: 'Ligue-1'
-},
-{
-  logo: 'Lorient.png',
-  name: 'Lorient',
-  ground: 'Lorient',
-  location: 'Stade du Moustoir',
-  capacity: 18890,
-  league: 'Ligue 1',
-  color: 'Ligue-1'
-},
-{
-  logo: 'Lyon.png',
-  name: 'Lyon',
-  ground: 'D\ufffdcines-Charpieu',
-  location: 'Parc OL',
-  capacity: 59186,
-  league: 'Ligue 1',
-  color: 'Ligue-1'
-},
-{
-  logo: 'Marseille.png',
-  name: 'Marseille',
-  ground: 'Marseille',
-  location: 'Stade Velodrome',
-  capacity: 67381,
-  league: 'Ligue 1',
-  color: 'Ligue-1'
-},
-{
-  logo: 'Metz.png',
-  name: 'Metz',
-  ground: 'Metz',
-  location: 'Stade Saint-Symphorien',
-  capacity: 25636,
-  league: 'Ligue 1',
-  color: 'Ligue-1'
-},
-{
-  logo: 'Monaco.png',
-  name: 'Monaco',
-  ground: '\ufffdMonaco',
-  location: 'Stade Louis II',
-  capacity: 18500,
-  league: 'Ligue 1',
-  color: 'Ligue-1'
-},
-{
-  logo: 'Montpellier.png',
-  name: 'Montpellier',
-  ground: 'Montpellier',
-  location: 'Stade de la Mosson',
-  capacity: 32939,
-  league: 'Ligue 1',
-  color: 'Ligue-1'
-},
-{
-  logo: 'Nancy.png',
-  name: 'Nancy',
-  ground: 'Tomblaine',
-  location: 'Stade Marcel Picot',
-  capacity: 20087,
-  league: 'Ligue 1',
-  color: 'Ligue-1'
-},
-{
-  logo: 'Nantes.png',
-  name: 'Nantes',
-  ground: 'Nantes',
-  location: 'Stade de la Beaujoire',
-  capacity: 38285,
-  league: 'Ligue 1',
-  color: 'Ligue-1'
-},
-{
-  logo: 'Nice.png',
-  name: 'Nice',
-  ground: 'Nice',
-  location: 'Allianz Riviera',
-  capacity: 35624,
-  league: 'Ligue 1',
-  color: 'Ligue-1'
-},
-{
-  logo: 'PSG.png',
-  name: 'PSG',
-  ground: 'Paris',
-  location: 'Parc des Princes',
-  capacity: 48712,
-  league: 'Ligue 1',
-  color: 'Ligue-1'
-},
-{
-  logo: 'Rennes.png',
-  name: 'Rennes',
-  ground: 'Rennes',
-  location: 'Roazhon Park',
-  capacity: 29376,
-  league: 'Ligue 1',
-  color: 'Ligue-1'
-},
-{
-  logo: 'Saint-Etienne.png',
-  name: 'Saint-Etienne',
-  ground: 'Saint-Etienne',
-  location: 'Stade Geoffroy-Guichard',
-  capacity: 42000,
-  league: 'Ligue 1',
-  color: 'Ligue-1'
-},
-{
-  logo: 'Toulouse.png',
-  name: 'Toulouse',
-  ground: 'Toulouse',
-  location: 'Stadium Municipal',
-  capacity: 35470,
-  league: 'Ligue 1',
-  color: 'Ligue-1'
-}
-]
+            league: 'La Liga',
+            color: 'La-Liga'
+            },
+            {
+            logo: 'Levante.png',
+            name: 'Levante',
+            ground: 'Ciutat de Valencia',
+            location: 'Valencia',
+            capacity: 26354,
+            league: 'La Liga',
+            color: 'La-Liga'
+            },
+            {
+            logo: 'Malaga.png',
+            name: 'Malaga',
+            ground: 'La Rosaleda',
+            location: 'Malaga',
+            capacity: 30044,
+            league: 'La Liga',
+            color: 'La-Liga'
+            },
+            {
+            logo: 'Real Betis.png',
+            name: 'Real Betis',
+            ground: 'Benito Villamarin',
+            location: 'Seville',
+            capacity: 60720,
+            league: 'La Liga',
+            color: 'La-Liga'
+            },
+            {
+            logo: 'Real Madrid.png',
+            name: 'Real Madrid',
+            ground: 'Santiago Bernabeu',
+            location: 'Madrid',
+            capacity: 81044,
+            league: 'La Liga',
+            color: 'La-Liga'
+            },
+            {
+            logo: 'Real Sociedad.png',
+            name: 'Real Sociedad',
+            ground: 'Anoeta',
+            location: 'San Sebastian',
+            capacity: 32000,
+            league: 'La Liga',
+            color: 'La-Liga'
+            },
+            {
+            logo: 'Sevilla.png',
+            name: 'Sevilla',
+            ground: 'Ramon Sanchez Pizjuan',
+            location: 'Seville',
+            capacity: 42714,
+            league: 'La Liga',
+            color: 'La-Liga'
+            },
+            {
+            logo: 'Valencia.png',
+            name: 'Valencia',
+            ground: 'Mestalla',
+            location: 'Valencia',
+            capacity: 49500,
+            league: 'La Liga',
+            color: 'La-Liga'
+            },
+            {
+            logo: 'Villarreal.png',
+            name: 'Villarreal',
+            ground: 'Estadio de la Ceramica',
+            location: 'Villarreal',
+            capacity: 24890,
+            league: 'La Liga',
+            color: 'La-Liga'
+            },
+            {
+            logo: 'Angers.png',
+            name: 'Angers',
+            ground: 'Angers',
+            location: 'Stade Raymond Kopa',
+            capacity: 17835,
+            league: 'Ligue 1',
+            color: 'Ligue-1'
+            },
+            {
+            logo: 'Bastia.png',
+            name: 'Bastia',
+            ground: 'Bastia',
+            location: 'Stade Armand Cesari',
+            capacity: 16480,
+            league: 'Ligue 1',
+            color: 'Ligue-1'
+            },
+            {
+            logo: 'Bordeaux.png',
+            name: 'Bordeaux',
+            ground: 'Bordeaux',
+            location: 'Matmut Atlantique',
+            capacity: 42115,
+            league: 'Ligue 1',
+            color: 'Ligue-1'
+            },
+            {
+            logo: 'Stade Malherbe Caen.png',
+            name: 'Stade Malherbe Caen',
+            ground: 'Stade Malherbe Caen',
+            location: 'Stade Michel d\'Ornano',
+            capacity: 20453,
+            league: 'Ligue 1',
+            color: 'Ligue-1'
+            },
+            {
+            logo: 'Dijon.png',
+            name: 'Dijon',
+            ground: 'Dijon',
+            location: 'Stade Gaston G\ufffdrard',
+            capacity: 16098,
+            league: 'Ligue 1',
+            color: 'Ligue-1'
+            },
+            {
+            logo: 'Guingamp.png',
+            name: 'Guingamp',
+            ground: 'Guingamp',
+            location: 'Stade du Roudourou',
+            capacity: 18126,
+            league: 'Ligue 1',
+            color: 'Ligue-1'
+            },
+            {
+            logo: 'Lille.png',
+            name: 'Lille',
+            ground: 'Villeneuve-d\'Ascq',
+            location: 'Stade Pierre-Mauroy',
+            capacity: 50186,
+            league: 'Ligue 1',
+            color: 'Ligue-1'
+            },
+            {
+            logo: 'Lorient.png',
+            name: 'Lorient',
+            ground: 'Lorient',
+            location: 'Stade du Moustoir',
+            capacity: 18890,
+            league: 'Ligue 1',
+            color: 'Ligue-1'
+            },
+            {
+            logo: 'Lyon.png',
+            name: 'Lyon',
+            ground: 'D\ufffdcines-Charpieu',
+            location: 'Parc OL',
+            capacity: 59186,
+            league: 'Ligue 1',
+            color: 'Ligue-1'
+            },
+            {
+            logo: 'Marseille.png',
+            name: 'Marseille',
+            ground: 'Marseille',
+            location: 'Stade Velodrome',
+            capacity: 67381,
+            league: 'Ligue 1',
+            color: 'Ligue-1'
+            },
+            {
+            logo: 'Metz.png',
+            name: 'Metz',
+            ground: 'Metz',
+            location: 'Stade Saint-Symphorien',
+            capacity: 25636,
+            league: 'Ligue 1',
+            color: 'Ligue-1'
+            },
+            {
+            logo: 'Monaco.png',
+            name: 'Monaco',
+            ground: '\ufffdMonaco',
+            location: 'Stade Louis II',
+            capacity: 18500,
+            league: 'Ligue 1',
+            color: 'Ligue-1'
+            },
+            {
+            logo: 'Montpellier.png',
+            name: 'Montpellier',
+            ground: 'Montpellier',
+            location: 'Stade de la Mosson',
+            capacity: 32939,
+            league: 'Ligue 1',
+            color: 'Ligue-1'
+            },
+            {
+            logo: 'Nancy.png',
+            name: 'Nancy',
+            ground: 'Tomblaine',
+            location: 'Stade Marcel Picot',
+            capacity: 20087,
+            league: 'Ligue 1',
+            color: 'Ligue-1'
+            },
+            {
+            logo: 'Nantes.png',
+            name: 'Nantes',
+            ground: 'Nantes',
+            location: 'Stade de la Beaujoire',
+            capacity: 38285,
+            league: 'Ligue 1',
+            color: 'Ligue-1'
+            },
+            {
+            logo: 'Nice.png',
+            name: 'Nice',
+            ground: 'Nice',
+            location: 'Allianz Riviera',
+            capacity: 35624,
+            league: 'Ligue 1',
+            color: 'Ligue-1'
+            },
+            {
+            logo: 'PSG.png',
+            name: 'PSG',
+            ground: 'Paris',
+            location: 'Parc des Princes',
+            capacity: 48712,
+            league: 'Ligue 1',
+            color: 'Ligue-1'
+            },
+            {
+            logo: 'Rennes.png',
+            name: 'Rennes',
+            ground: 'Rennes',
+            location: 'Roazhon Park',
+            capacity: 29376,
+            league: 'Ligue 1',
+            color: 'Ligue-1'
+            },
+            {
+            logo: 'Saint-Etienne.png',
+            name: 'Saint-Etienne',
+            ground: 'Saint-Etienne',
+            location: 'Stade Geoffroy-Guichard',
+            capacity: 42000,
+            league: 'Ligue 1',
+            color: 'Ligue-1'
+            },
+            {
+            logo: 'Toulouse.png',
+            name: 'Toulouse',
+            ground: 'Toulouse',
+            location: 'Stadium Municipal',
+            capacity: 35470,
+            league: 'Ligue 1',
+            color: 'Ligue-1'
+            }
+    ]
+
   }
 }

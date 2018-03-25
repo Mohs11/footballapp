@@ -1,30 +1,17 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Rx';
 
 import { Club } from '../modles/Clubs';
 
 @Injectable()
 export class DataService {
-  clubs: Club[];
-  data: Observable<any>;
 
-  constructor() {
-
-          this.clubs = [
-            {
-              logo: "content/img/Tottenham Hotspur.png",
-              name:"Tottenham Hotspur",
-              ground:"Wembley Stadium",
-              location:"London",
-              capacity: 90000,
-              league:"Premier League",
-              color: "Premier-League"
-            }
-          ];
+  constructor(private http: Http) {
 }
    getClubs(): Observable<Club[]> {
-     return of(this.clubs);
+     return this.http.get('app/data/clubs.json')
+     .map(res => res.json().data)
    }
-
-  }
+}
