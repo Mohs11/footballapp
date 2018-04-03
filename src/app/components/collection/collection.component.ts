@@ -1,10 +1,12 @@
-import { Component, Input, OnInit, Pipe, PipeTransform } from '@angular/core';
+import { Component, Pipe, PipeTransform, OnInit } from '@angular/core';
 import { Club } from '../../modles/Clubs';
+import { NgModel } from '@angular/forms';
+import { FilterPipe } from '../../filter.pipe';
 
 @Component({
   selector: 'app-collection',
   templateUrl: './collection.component.html',
-  styleUrls: ['./collection.component.css']
+  styleUrls: ['./collection.component.css'],
 })
 export class CollectionComponent implements OnInit {
   clubs: Club[];

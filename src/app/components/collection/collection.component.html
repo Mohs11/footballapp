@@ -1,6 +1,6 @@
-
+  <input class="search" type="text" [(ngModel)]="term" placeholder="Search for a team name">
 <div class="row">
-  <div class="card custom-card col-4" *ngFor="let club of clubs">
+  <div class="card custom-card col-4" *ngFor="let club of clubs | filter:term">
       <img class="clublogo" src="../../../assets/img/{{club.logo}}" alt="{{club.logo}}">
     <h1>{{club.name}}</h1>
     <ul>
