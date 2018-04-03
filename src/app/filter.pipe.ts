@@ -13,5 +13,4 @@ export class FilterPipe implements PipeTransform {
     return club.name.toLowerCase().includes(term.toLowerCase());
   })
   }
-
 }

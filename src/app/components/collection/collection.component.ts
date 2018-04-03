@@ -2,6 +2,7 @@ import { Component, Pipe, PipeTransform, OnInit } from '@angular/core';
 import { Club } from '../../modles/Clubs';
 import { NgModel } from '@angular/forms';
 import { FilterPipe } from '../../filter.pipe';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-collection',
@@ -24,7 +25,7 @@ export class CollectionComponent implements OnInit {
             location: 'London',
             capacity: 90000,
             league: 'Premier League',
-            color: 'Premier-League'
+            color: '#7D55A5'
           },
           {
             logo: 'Manchester United.png',
@@ -33,7 +34,7 @@ export class CollectionComponent implements OnInit {
             location: 'Manchester',
             capacity: 75653,
             league: 'Premier League',
-            color: 'Premier-League'
+            color: '#7D55A5'
           },
           {
             logo: 'Arsenal.png',
@@ -42,7 +43,7 @@ export class CollectionComponent implements OnInit {
             location: 'London',
             capacity: 60260,
             league: 'Premier League',
-            color: 'Premier-League'
+            color: '#7D55A5'
           },
           {
             logo: 'West Ham United.png',
@@ -51,7 +52,7 @@ export class CollectionComponent implements OnInit {
             location: 'London',
             capacity: 60000,
             league: 'Premier League',
-            color: 'Premier-League'
+            color: '#7D55A5'
           },
           {
             logo: 'Manchester City.png',
@@ -60,7 +61,7 @@ export class CollectionComponent implements OnInit {
             location: 'Manchester',
             capacity: 55097,
             league: 'Premier League',
-            color: 'Premier-League'
+            color: '#7D55A5'
           },
           {
             logo: 'Liverpool.png',
@@ -69,7 +70,7 @@ export class CollectionComponent implements OnInit {
             location: 'Liverpool',
             capacity: 54074,
             league: 'Premier League',
-            color: 'Premier-League'
+            color: '#7D55A5'
           },
           {
             logo: 'Newcastle United.png',
@@ -78,7 +79,7 @@ export class CollectionComponent implements OnInit {
             location: 'Newcastle upon Tyne',
             capacity: 52338,
             league: 'Premier League',
-            color: 'Premier-League'
+            color: '#7D55A5'
           },
           {
             logo: 'Sunderland.png',
@@ -87,7 +88,7 @@ export class CollectionComponent implements OnInit {
             location: 'Sunderland',
             capacity: 48707,
             league: 'Championship',
-            color: 'Championship'
+            color: '#44A7C7'
           },
           {
             logo: 'Aston Villa.png',
@@ -96,7 +97,7 @@ export class CollectionComponent implements OnInit {
             location: 'Birmingham',
             capacity: 42660,
             league: 'Championship',
-            color: 'Championship'
+            color: '#44A7C7'
           },
           {
             logo: 'Chelsea.png',
@@ -105,7 +106,7 @@ export class CollectionComponent implements OnInit {
             location: 'London',
             capacity: 41798,
             league: 'Premier League',
-            color: 'Premier-League'
+            color: '#7D55A5'
           },
           {
             logo: 'Sheffield Wednesday.png',
@@ -114,7 +115,7 @@ export class CollectionComponent implements OnInit {
             location: 'Sheffield',
             capacity: 39732,
             league: 'Championship',
-            color: 'Championship'
+            color: '#44A7C7'
           },
           {
             logo: 'Everton.png',
@@ -123,7 +124,7 @@ export class CollectionComponent implements OnInit {
             location: 'Liverpool',
             capacity: 39571,
             league: 'Premier League',
-            color: 'Premier-League'
+            color: '#7D55A5'
           },
           {
             logo: 'Leeds United.png',
@@ -132,7 +133,7 @@ export class CollectionComponent implements OnInit {
             location: 'Leeds',
             capacity: 37890,
             league: 'Championship',
-            color: 'Championship'
+            color: '#44A7C7'
           },
           {
             logo: 'Tottenham Hotspur.png',
@@ -141,7 +142,7 @@ export class CollectionComponent implements OnInit {
             location: 'London',
             capacity: 36284,
             league: 'Premier League',
-            color: 'Premier-League'
+            color: '#7D55A5'
           },
           {
             logo: 'Middlesbrough.png',
@@ -150,7 +151,7 @@ export class CollectionComponent implements OnInit {
             location: 'Middlesbrough',
             capacity: 34988,
             league: 'Championship',
-            color: 'Championship'
+            color: '#44A7C7'
           },
           {
             logo: 'Derby County.png',
@@ -159,7 +160,7 @@ export class CollectionComponent implements OnInit {
             location: 'Derby',
             capacity: 33597,
             league: 'Championship',
-            color: 'Championship'
+            color: '#44A7C7'
           },
           {
             logo: 'Cardiff City.png',
@@ -168,7 +169,7 @@ export class CollectionComponent implements OnInit {
             location: 'Cardiff',
             capacity: 33280,
             league: 'Championship',
-            color: 'Championship'
+            color: '#44A7C7'
           },
           {
             logo: 'Sheffield United.png',
@@ -177,7 +178,7 @@ export class CollectionComponent implements OnInit {
             location: 'Sheffield',
             capacity: 32702,
             league: 'Championship',
-            color: 'Championship'
+            color: '#44A7C7'
           },
           {
             logo: 'Southampton.png',
@@ -186,7 +187,7 @@ export class CollectionComponent implements OnInit {
             location: 'Southampton',
             capacity: 32505,
             league: 'Premier League',
-            color: 'Premier-League'
+            color: '#7D55A5'
           },
           {
             logo: 'Coventry City.png',
@@ -195,7 +196,7 @@ export class CollectionComponent implements OnInit {
             location: 'Coventry',
             capacity: 32500,
             league: 'League Two',
-            color: 'League-Two'
+            color: '#107cdf'
           },
           {
             logo: 'Leicester City.png',
@@ -204,7 +205,7 @@ export class CollectionComponent implements OnInit {
             location: 'Leicester',
             capacity: 32312,
             league: 'Premier League',
-            color: 'Premier-League'
+            color: '#7D55A5'
           },
           {
             logo: 'Wolverhampton Wanderers.png',
@@ -213,7 +214,7 @@ export class CollectionComponent implements OnInit {
             location: 'Wolverhampton',
             capacity: 31700,
             league: 'Championship',
-            color: 'Championship'
+            color: '#44A7C7'
           },
           {
             logo: 'Blackburn Rovers.png',
@@ -222,7 +223,7 @@ export class CollectionComponent implements OnInit {
             location: 'Blackburn',
             capacity: 31154,
             league: 'League One',
-            color: 'League-One'
+            color: 'red'
           },
           {
             logo: 'Brighton & Hove Albion.png',
@@ -231,7 +232,7 @@ export class CollectionComponent implements OnInit {
             location: 'Brighton',
             capacity: 30750,
             league: 'Premier League',
-            color: 'Premier-League'
+            color: '#7D55A5'
           },
           {
             logo: 'Nottingham Forest.png',
@@ -240,7 +241,7 @@ export class CollectionComponent implements OnInit {
             location: 'Nottingham',
             capacity: 30576,
             league: 'Championship',
-            color: 'Championship'
+            color: '#44A7C7'
           },
           {
             logo: 'Milton Keynes Dons.png',
@@ -249,7 +250,7 @@ export class CollectionComponent implements OnInit {
             location: 'Milton Keynes',
             capacity: 30500,
             league: 'League One',
-            color: 'League-One'
+            color: 'red'
           },
           {
             logo: 'Ipswich Town.png',
@@ -258,7 +259,7 @@ export class CollectionComponent implements OnInit {
             location: 'Ipswich',
             capacity: 30311,
             league: 'Championship',
-            color: 'Championship'
+            color: '#44A7C7'
           },
           {
             logo: 'Birmingham City.png',
@@ -267,7 +268,7 @@ export class CollectionComponent implements OnInit {
             location: 'Birmingham',
             capacity: 30016,
             league: 'Championship',
-            color: 'Championship'
+            color: '#44A7C7'
           },
           {
             logo: 'Bolton Wanderers.png',
@@ -276,7 +277,7 @@ export class CollectionComponent implements OnInit {
             location: 'Bolton',
             capacity: 28723,
             league: 'Championship',
-            color: 'Championship'
+            color: '#44A7C7'
           },
           {
             logo: 'Stoke City.png',
@@ -285,7 +286,7 @@ export class CollectionComponent implements OnInit {
             location: 'Stoke-on-Trent',
             capacity: 27740,
             league: 'Premier League',
-            color: 'Premier-League'
+            color: '#7D55A5'
           },
           {
             logo: 'Norwich City.png',
@@ -294,7 +295,7 @@ export class CollectionComponent implements OnInit {
             location: 'Norwich',
             capacity: 27224,
             league: 'Championship',
-            color: 'Championship'
+            color: '#44A7C7'
           },
           {
             logo: 'Charlton Athletic.png',
@@ -303,7 +304,7 @@ export class CollectionComponent implements OnInit {
             location: 'London',
             capacity: 27111,
             league: 'League One',
-            color: 'League-One'
+            color: 'red'
           },
           {
             logo: 'Bristol City.png',
@@ -312,7 +313,7 @@ export class CollectionComponent implements OnInit {
             location: 'Bristol',
             capacity: 27000,
             league: 'Championship',
-            color: 'Championship'
+            color: '#44A7C7'
           },
           {
             logo: 'West Bromwich Albion.png',
@@ -321,7 +322,7 @@ export class CollectionComponent implements OnInit {
             location: 'West Bromwich',
             capacity: 26850,
             league: 'Premier League',
-            color: 'Premier-League'
+            color: '#7D55A5'
           },
           {
             logo: 'Fulham.png',
@@ -330,7 +331,7 @@ export class CollectionComponent implements OnInit {
             location: 'London',
             capacity: 25678,
             league: 'Championship',
-            color: 'Championship'
+            color: '#44A7C7'
           },
           {
             logo: 'Hull City.png',
@@ -339,7 +340,7 @@ export class CollectionComponent implements OnInit {
             location: 'Kingston upon Hull',
             capacity: 25586,
             league: 'Championship',
-            color: 'Championship'
+            color: '#44A7C7'
           },
           {
             logo: 'Bradford City.png',
@@ -348,7 +349,7 @@ export class CollectionComponent implements OnInit {
             location: 'Bradford',
             capacity: 25136,
             league: 'League One',
-            color: 'League-One'
+            color: 'red'
           },
           {
             logo: 'Crystal Palace.png',
@@ -357,7 +358,7 @@ export class CollectionComponent implements OnInit {
             location: 'London',
             capacity: 25073,
             league: 'Premier League',
-            color: 'Premier-League'
+            color: '#7D55A5'
           },
           {
             logo: 'Wigan Athletic.png',
@@ -366,7 +367,7 @@ export class CollectionComponent implements OnInit {
             location: 'Wigan',
             capacity: 25023,
             league: 'League One',
-            color: 'League-One'
+            color: 'red'
           },
           {
             logo: 'Huddersfield Town.png',
@@ -375,7 +376,7 @@ export class CollectionComponent implements OnInit {
             location: 'Huddersfield',
             capacity: 24500,
             league: 'Premier League',
-            color: 'Premier-League'
+            color: '#7D55A5'
           },
           {
             logo: 'Reading.png',
@@ -384,7 +385,7 @@ export class CollectionComponent implements OnInit {
             location: 'Reading',
             capacity: 24161,
             league: 'Championship',
-            color: 'Championship'
+            color: '#44A7C7'
           },
           {
             logo: 'Preston North End.png',
@@ -393,7 +394,7 @@ export class CollectionComponent implements OnInit {
             location: 'Preston',
             capacity: 23408,
             league: 'Championship',
-            color: 'Championship'
+            color: '#44A7C7'
           },
           {
             logo: 'Barnsley.png',
@@ -402,7 +403,7 @@ export class CollectionComponent implements OnInit {
             location: 'Barnsley',
             capacity: 23009,
             league: 'Championship',
-            color: 'Championship'
+            color: '#44A7C7'
           },
           {
             logo: 'Watford.png',
@@ -411,7 +412,7 @@ export class CollectionComponent implements OnInit {
             location: 'Watford',
             capacity: 21438,
             league: 'Premier League',
-            color: 'Premier-League'
+            color: '#7D55A5'
           },
           {
             logo: 'Burnley.png',
@@ -420,7 +421,7 @@ export class CollectionComponent implements OnInit {
             location: 'Burnley',
             capacity: 21401,
             league: 'Premier League',
-            color: 'Premier-League'
+            color: '#7D55A5'
           },
           {
             logo: 'Swansea City.png',
@@ -429,7 +430,7 @@ export class CollectionComponent implements OnInit {
             location: 'Swansea',
             capacity: 20909,
             league: 'Premier League',
-            color: 'Premier-League'
+            color: '#7D55A5'
           },
           {
             logo: 'Portsmouth.png',
@@ -438,7 +439,7 @@ export class CollectionComponent implements OnInit {
             location: 'Portsmouth',
             capacity: 20700,
             league: 'League One',
-            color: 'League-One'
+            color: 'red'
           },
           {
             logo: 'Notts County.png',
@@ -447,7 +448,7 @@ export class CollectionComponent implements OnInit {
             location: 'Nottingham',
             capacity: 20300,
             league: 'League Two',
-            color: 'League-Two'
+            color: '#107cdf'
           },
           {
             logo: 'Millwall.png',
@@ -456,7 +457,7 @@ export class CollectionComponent implements OnInit {
             location: 'London',
             capacity: 20146,
             league: 'Championship',
-            color: 'Championship'
+            color: '#44A7C7'
           },
           {
             logo: 'Plymouth Argyle.png',
@@ -465,7 +466,7 @@ export class CollectionComponent implements OnInit {
             location: 'Plymouth',
             capacity: 19500,
             league: 'League One',
-            color: 'League-One'
+            color: 'red'
           },
           {
             logo: 'Port Vale.png',
@@ -474,7 +475,7 @@ export class CollectionComponent implements OnInit {
             location: 'Stoke-on-Trent',
             capacity: 18947,
             league: 'League Two',
-            color: 'League-Two'
+            color: '#107cdf'
           },
           {
             logo: 'Queens Park Rangers.png',
@@ -483,7 +484,7 @@ export class CollectionComponent implements OnInit {
             location: 'London',
             capacity: 18489,
             league: 'Championship',
-            color: 'Championship'
+            color: '#44A7C7'
           },
           {
             logo: 'Carlisle United.png',
@@ -492,7 +493,7 @@ export class CollectionComponent implements OnInit {
             location: 'Carlisle',
             capacity: 18202,
             league: 'League Two',
-            color: 'League-Two'
+            color: '#107cdf'
           },
           {
             logo: 'Blackpool.png',
@@ -501,7 +502,7 @@ export class CollectionComponent implements OnInit {
             location: 'Blackpool',
             capacity: 17338,
             league: 'League One',
-            color: 'League-One'
+            color: 'red'
           },
           {
             logo: 'Tranmere Rovers.png',
@@ -510,7 +511,7 @@ export class CollectionComponent implements OnInit {
             location: 'Birkenhead',
             capacity: 16587,
             league: 'National League',
-            color: 'National-League'
+            color: 'orange'
           },
           {
             logo: 'Swindon Town.png',
@@ -519,7 +520,7 @@ export class CollectionComponent implements OnInit {
             location: 'Swindon',
             capacity: 15728,
             league: 'League Two',
-            color: 'League-Two'
+            color: '#107cdf'
           },
           {
             logo: 'Doncaster Rovers.png',
@@ -528,7 +529,7 @@ export class CollectionComponent implements OnInit {
             location: 'Doncaster',
             capacity: 15231,
             league: 'League One',
-            color: 'League-One'
+            color: 'red'
           },
           {
             logo: 'Peterborough United.png',
@@ -537,7 +538,7 @@ export class CollectionComponent implements OnInit {
             location: 'Peterborough',
             capacity: 14319,
             league: 'League One',
-            color: 'League-One'
+            color: 'red'
           },
           {
             logo: 'Oldham Athletic.png',
@@ -546,7 +547,7 @@ export class CollectionComponent implements OnInit {
             location: 'Oldham',
             capacity: 13309,
             league: 'League One',
-            color: 'League-One'
+            color: 'red'
           },
           {
             logo: 'Liverpool.png',
@@ -555,7 +556,7 @@ export class CollectionComponent implements OnInit {
             location: 'Widnes',
             capacity: 13350,
             league: 'Womens Super League One',
-            color: 'Womens-Super-League-One'
+            color: '#dda0dd'
           },
           {
             logo: 'Brentford.png',
@@ -564,7 +565,7 @@ export class CollectionComponent implements OnInit {
             location: 'London',
             capacity: 12763,
             league: 'Championship',
-            color: 'Championship'
+            color: '#44A7C7'
           },
           {
             logo: 'Oxford United.png',
@@ -573,7 +574,7 @@ export class CollectionComponent implements OnInit {
             location: 'Oxford',
             capacity: 12500,
             league: 'League One',
-            color: 'League-One'
+            color: 'red'
           },
           {
             logo: 'Southend United.png',
@@ -582,7 +583,7 @@ export class CollectionComponent implements OnInit {
             location: 'Southend',
             capacity: 12392,
             league: 'League One',
-            color: 'League-One'
+            color: 'red'
           },
           {
             logo: 'Bristol Rovers.png',
@@ -591,7 +592,7 @@ export class CollectionComponent implements OnInit {
             location: 'Bristol',
             capacity: 12300,
             league: 'League One',
-            color: 'League-One'
+            color: 'red'
           },
           {
             logo: 'Rotherham.png',
@@ -600,7 +601,7 @@ export class CollectionComponent implements OnInit {
             location: 'Rotherham',
             capacity: 12021,
             league: 'League One',
-            color: 'League-One'
+            color: 'red'
           },
           {
             logo: 'Gateshead.png',
@@ -609,7 +610,7 @@ export class CollectionComponent implements OnInit {
             location: 'Gateshead',
             capacity: 11800,
             league: 'National League',
-            color: 'National-League'
+            color: 'orange'
           },
           {
             logo: 'Bury.png',
@@ -618,7 +619,7 @@ export class CollectionComponent implements OnInit {
             location: 'Bury',
             capacity: 11640,
             league: 'League One',
-            color: 'League-One'
+            color: 'red'
           },
           {
             logo: 'Gillingham.png',
@@ -627,7 +628,7 @@ export class CollectionComponent implements OnInit {
             location: 'Gillingham',
             capacity: 11582,
             league: 'League One',
-            color: 'League-One'
+            color: 'red'
           },
           {
             logo: 'AFC Bournemouth.png',
@@ -636,7 +637,7 @@ export class CollectionComponent implements OnInit {
             location: 'Bournemouth',
             capacity: 11464,
             league: 'Premier League',
-            color: 'Premier-League'
+            color: '#7D55A5'
           },
           {
             logo: 'Walsall.png',
@@ -645,7 +646,7 @@ export class CollectionComponent implements OnInit {
             location: 'Walsall',
             capacity: 11300,
             league: 'League One',
-            color: 'League-One'
+            color: 'red'
           },
           {
             logo: 'Stockport County.png',
@@ -654,7 +655,7 @@ export class CollectionComponent implements OnInit {
             location: 'Stockport',
             capacity: 10832,
             league: 'National League North',
-            color: 'National-League-North'
+            color: 'green'
           },
           {
             logo: 'Halifax Town.png',
@@ -663,7 +664,7 @@ export class CollectionComponent implements OnInit {
             location: 'Halifax',
             capacity: 10561,
             league: 'National League',
-            color: 'National-League'
+            color: 'orange'
           },
           {
             logo: 'Wrexham.png',
@@ -672,7 +673,7 @@ export class CollectionComponent implements OnInit {
             location: 'Wrexham',
             capacity: 10500,
             league: 'National League',
-            color: 'National-League'
+            color: 'orange'
           },
           {
             logo: 'Chesterfield.png',
@@ -681,7 +682,7 @@ export class CollectionComponent implements OnInit {
             location: 'Chesterfield',
             capacity: 10400,
             league: 'League Two',
-            color: 'League-Two'
+            color: '#107cdf'
           },
           {
             logo: 'Luton Town.png',
@@ -690,7 +691,7 @@ export class CollectionComponent implements OnInit {
             location: 'Luton',
             capacity: 10356,
             league: 'League Two',
-            color: 'League-Two'
+            color: '#107cdf'
           },
           {
             logo: 'Wycombe Wanderers.png',
@@ -699,7 +700,7 @@ export class CollectionComponent implements OnInit {
             location: 'Wycombe',
             capacity: 10300,
             league: 'League Two',
-            color: 'League-Two'
+            color: '#107cdf'
           },
           {
             logo: 'Rochdale.png',
@@ -708,7 +709,7 @@ export class CollectionComponent implements OnInit {
             location: 'Rochdale',
             capacity: 10249,
             league: 'League One',
-            color: 'League-One'
+            color: 'red'
           },
           {
             logo: 'Lincoln City.png',
@@ -717,7 +718,7 @@ export class CollectionComponent implements OnInit {
             location: 'Lincoln',
             capacity: 10130,
             league: 'League Two',
-            color: 'League-Two'
+            color: '#107cdf'
           },
           {
             logo: 'Colchester United.png',
@@ -726,7 +727,7 @@ export class CollectionComponent implements OnInit {
             location: 'Colchester',
             capacity: 10105,
             league: 'League Two',
-            color: 'League-Two'
+            color: '#107cdf'
           },
           {
             logo: 'Crewe Alexandra.png',
@@ -735,7 +736,7 @@ export class CollectionComponent implements OnInit {
             location: 'Crewe',
             capacity: 10066,
             league: 'League Two',
-            color: 'League-Two'
+            color: '#107cdf'
           },
           {
             logo: 'Mansfield Town.png',
@@ -744,7 +745,7 @@ export class CollectionComponent implements OnInit {
             location: 'Mansfield',
             capacity: 10000,
             league: 'League Two',
-            color: 'League-Two'
+            color: '#107cdf'
           },
           {
             logo: 'Shrewsbury Town.png',
@@ -753,7 +754,7 @@ export class CollectionComponent implements OnInit {
             location: 'Shrewsbury',
             capacity: 9875,
             league: 'League One',
-            color: 'League-One'
+            color: 'red'
           },
           {
             logo: 'Yeovil Town.png',
@@ -762,7 +763,7 @@ export class CollectionComponent implements OnInit {
             location: 'Yeovil',
             capacity: 9665,
             league: 'League Two',
-            color: 'League-Two'
+            color: '#107cdf'
           },
           {
             logo: 'Cambridge United.png',
@@ -771,7 +772,7 @@ export class CollectionComponent implements OnInit {
             location: 'Cambridge',
             capacity: 9617,
             league: 'League Two',
-            color: 'League-Two'
+            color: '#107cdf'
           },
           {
             logo: 'Grimsby Town.png',
@@ -780,7 +781,7 @@ export class CollectionComponent implements OnInit {
             location: 'Cleethorpes',
             capacity: 9546,
             league: 'League Two',
-            color: 'League-Two'
+            color: '#107cdf'
           },
           {
             logo: 'Leyton Orient.png',
@@ -789,7 +790,7 @@ export class CollectionComponent implements OnInit {
             location: 'London',
             capacity: 9271,
             league: 'National League',
-            color: 'National-League'
+            color: 'orange'
           },
           {
             logo: 'Scunthorpe United.png',
@@ -798,7 +799,7 @@ export class CollectionComponent implements OnInit {
             location: 'Scunthorpe',
             capacity: 9183,
             league: 'League One',
-            color: 'League-One'
+            color: 'red'
           },
           {
             logo: 'Bath City.png',
@@ -815,7 +816,7 @@ export class CollectionComponent implements OnInit {
             location: 'Exeter',
             capacity: 8830,
             league: 'League Two',
-            color: 'League-Two'
+            color: '#107cdf'
           },
           {
             logo: 'York City.png',
@@ -824,7 +825,7 @@ export class CollectionComponent implements OnInit {
             location: 'York',
             capacity: 7872,
             league: 'National League North',
-            color: 'National-League-North'
+            color: 'green'
           },
           {
             logo: 'Hartlepool United.png',
@@ -833,7 +834,7 @@ export class CollectionComponent implements OnInit {
             location: 'Hartlepool',
             capacity: 7833,
             league: 'National League',
-            color: 'National-League'
+            color: 'orange'
           },
           {
             logo: 'Northampton Town.png',
@@ -842,7 +843,7 @@ export class CollectionComponent implements OnInit {
             location: 'Northampton',
             capacity: 7653,
             league: 'League One',
-            color: 'League-One'
+            color: 'red'
           },
           {
             logo: 'Aldershot Town.png',
@@ -851,7 +852,7 @@ export class CollectionComponent implements OnInit {
             location: 'Aldershot',
             capacity: 7100,
             league: 'National League',
-            color: 'National-League'
+            color: 'orange'
           },
           {
             logo: 'Cheltenham Town.png',
@@ -860,7 +861,7 @@ export class CollectionComponent implements OnInit {
             location: 'Cheltenham',
             capacity: 7066,
             league: 'League Two',
-            color: 'League-Two'
+            color: '#107cdf'
           },
           {
             logo: 'Newport County.png',
@@ -869,7 +870,7 @@ export class CollectionComponent implements OnInit {
             location: 'Newport',
             capacity: 7012,
             league: 'League Two',
-            color: 'League-Two'
+            color: '#107cdf'
           },
           {
             logo: 'Manchester City.png',
@@ -878,7 +879,7 @@ export class CollectionComponent implements OnInit {
             location: 'Manchester',
             capacity: 7000,
             league: 'Womens Super League One',
-            color: 'Womens-Super-League-One'
+            color: '#dda0dd'
           },
           {
             logo: 'Stevenage.png',
@@ -887,7 +888,7 @@ export class CollectionComponent implements OnInit {
             location: 'Stevenage',
             capacity: 6920,
             league: 'League Two',
-            color: 'League-Two'
+            color: '#107cdf'
           },
           {
             logo: 'Burton Albion.png',
@@ -896,7 +897,7 @@ export class CollectionComponent implements OnInit {
             location: 'Burton-upon-Trent',
             capacity: 6912,
             league: 'Championship',
-            color: 'Championship'
+            color: '#44A7C7'
           },
           {
             logo: 'Boston United.png',
@@ -905,7 +906,7 @@ export class CollectionComponent implements OnInit {
             location: 'Boston',
             capacity: 6643,
             league: 'National League North',
-            color: 'National-League-North'
+            color: 'green'
           },
           {
             logo: 'Torquay United.png',
@@ -914,7 +915,7 @@ export class CollectionComponent implements OnInit {
             location: 'Torquay',
             capacity: 6500,
             league: 'National League',
-            color: 'National-League'
+            color: 'orange'
           },
           {
             logo: 'Stalybridge Celtic.png',
@@ -923,7 +924,7 @@ export class CollectionComponent implements OnInit {
             location: 'Stalybridge',
             capacity: 6500,
             league: 'Northern Premier League',
-            color: 'Northern-Premier-League'
+            color: 'white'
           },
           {
             logo: 'Morecambe.png',
@@ -932,7 +933,7 @@ export class CollectionComponent implements OnInit {
             location: 'Morecambe',
             capacity: 6476,
             league: 'League Two',
-            color: 'League-Two'
+            color: '#107cdf'
           },
           {
             logo: 'Macclesfield Town.png',
@@ -941,7 +942,7 @@ export class CollectionComponent implements OnInit {
             location: 'Macclesfield',
             capacity: 6335,
             league: 'National League',
-            color: 'National-League'
+            color: 'orange'
           },
           {
             logo: 'AFC Telford United.png',
@@ -950,7 +951,7 @@ export class CollectionComponent implements OnInit {
             location: 'Telford',
             capacity: 6300,
             league: 'National League North',
-            color: 'National-League-North'
+            color: 'green'
           },
           {
             logo: 'Kidderminster Harriers.png',
@@ -959,7 +960,7 @@ export class CollectionComponent implements OnInit {
             location: 'Kidderminster',
             capacity: 6238,
             league: 'National League North',
-            color: 'National-League-North'
+            color: 'green'
           },
           {
             logo: 'Altrincham.png',
@@ -968,7 +969,7 @@ export class CollectionComponent implements OnInit {
             location: 'Altrincham',
             capacity: 6085,
             league: 'Northern Premier League',
-            color: 'Northern-Premier-League'
+            color: 'white'
           },
           {
             logo: 'Southport.png',
@@ -977,7 +978,7 @@ export class CollectionComponent implements OnInit {
             location: 'Southport',
             capacity: 6008,
             league: 'National League North',
-            color: 'National-League-North'
+            color: 'green'
           },
           {
             logo: 'Dagenham & Redbridge.png',
@@ -986,7 +987,7 @@ export class CollectionComponent implements OnInit {
             location: 'Dagenham',
             capacity: 600,
             league: 'National League',
-            color: 'National-League'
+            color: 'orange'
           },
           {
             logo: 'Woking.png',
@@ -995,7 +996,7 @@ export class CollectionComponent implements OnInit {
             location: 'Woking',
             capacity: 6000,
             league: 'National League',
-            color: 'National-League'
+            color: 'orange'
           },
           {
             logo: 'Basingstoke Town.png',
@@ -1020,7 +1021,7 @@ export class CollectionComponent implements OnInit {
             location: 'Crawley',
             capacity: 5996,
             league: 'League Two',
-            color: 'League-Two'
+            color: '#107cdf'
           },
           {
             logo: 'Dover Athletic.png',
@@ -1029,7 +1030,7 @@ export class CollectionComponent implements OnInit {
             location: 'Dover',
             capacity: 5745,
             league: 'National League',
-            color: 'National-League'
+            color: 'orange'
           },
           {
             logo: 'Fleetwood Town.png',
@@ -1038,7 +1039,7 @@ export class CollectionComponent implements OnInit {
             location: 'Fleetwood',
             capacity: 53110,
             league: 'League One',
-            color: 'League-One'
+            color: 'red'
           },
           {
             logo: 'Havant & Waterlooville.png',
@@ -1055,7 +1056,7 @@ export class CollectionComponent implements OnInit {
             location: 'London',
             capacity: 52332,
             league: 'League Two',
-            color: 'League-Two'
+            color: '#107cdf'
           },
           {
             logo: 'Eastleigh.png',
@@ -1064,7 +1065,7 @@ export class CollectionComponent implements OnInit {
             location: 'Eastleigh',
             capacity: 51923,
             league: 'National League',
-            color: 'National-League'
+            color: 'orange'
           },
           {
             logo: 'Forest Green Rovers.png',
@@ -1073,7 +1074,7 @@ export class CollectionComponent implements OnInit {
             location: 'Nailsworth',
             capacity: 51404,
             league: 'League Two',
-            color: 'League-Two'
+            color: '#107cdf'
           },
           {
             logo: 'Chester.png',
@@ -1082,7 +1083,7 @@ export class CollectionComponent implements OnInit {
             location: 'Chester',
             capacity: 51265,
             league: 'National League',
-            color: 'National-League'
+            color: 'orange'
           },
           {
             logo: 'Accrington Stanley.png',
@@ -1091,7 +1092,7 @@ export class CollectionComponent implements OnInit {
             location: 'Accrington',
             capacity: 50576,
             league: 'League Two',
-            color: 'League-Two'
+            color: '#107cdf'
           },
           {
             logo: 'Sutton United.png',
@@ -1100,7 +1101,7 @@ export class CollectionComponent implements OnInit {
             location: 'London',
             capacity: 50137,
             league: 'National League',
-            color: 'National-League'
+            color: 'orange'
           },
           {
             logo: 'Ebbsfleet United.png',
@@ -1109,7 +1110,7 @@ export class CollectionComponent implements OnInit {
             location: 'Northfleet',
             capacity: 50118,
             league: 'National League',
-            color: 'National-League'
+            color: 'orange'
           },
           {
             logo: 'Bromley.png',
@@ -1118,7 +1119,7 @@ export class CollectionComponent implements OnInit {
             location: 'Bromley',
             capacity: 50009,
             league: 'National League',
-            color: 'National-League'
+            color: 'orange'
           },
           {
             logo: 'AFC Wimbledon.png',
@@ -1127,7 +1128,7 @@ export class CollectionComponent implements OnInit {
             location: 'London',
             capacity: 48500,
             league: 'League One',
-            color: 'League-One'
+            color: 'red'
           },
           {
             logo: 'Boreham Wood.png',
@@ -1136,7 +1137,7 @@ export class CollectionComponent implements OnInit {
             location: 'Borehamwood',
             capacity: 45001,
             league: 'National League',
-            color: 'National-League'
+            color: 'orange'
           },
           {
             logo: 'Barrow.png',
@@ -1145,7 +1146,7 @@ export class CollectionComponent implements OnInit {
             location: 'Barrow-in-Furness',
             capacity: 42002,
             league: 'National League',
-            color: 'National-League'
+            color: 'orange'
           },
           {
             logo: 'Berwick Rangers.png',
@@ -1162,7 +1163,7 @@ export class CollectionComponent implements OnInit {
             location: 'Braintree',
             capacity: 41514,
             league: 'National League South',
-            color: 'National-League-South'
+            color: '#ebb3f2'
           },
           {
             logo: 'Solihull Moors.png',
@@ -1171,7 +1172,7 @@ export class CollectionComponent implements OnInit {
             location: 'Solihull',
             capacity: 30505,
             league: 'National League',
-            color: 'National-League'
+            color: 'orange'
           },
           {
             logo: 'Maidstone United.png',
@@ -1180,7 +1181,7 @@ export class CollectionComponent implements OnInit {
             location: 'Maidstone',
             capacity: 30006,
             league: 'National League',
-            color: 'National-League'
+            color: 'orange'
           },
           {
             logo: 'Guiseley.png',
@@ -1189,7 +1190,7 @@ export class CollectionComponent implements OnInit {
             location: 'Guiseley',
             capacity: 30007,
             league: 'National League',
-            color: 'National-League'
+            color: 'orange'
           },
           {
             logo: 'Chelsea.png',
@@ -1198,7 +1199,7 @@ export class CollectionComponent implements OnInit {
             location: 'Staines',
             capacity: 30098,
             league: 'Womens Super League One',
-            color: 'Womens-Super-League-One'
+            color: '#dda0dd'
           },
           {
             logo: 'North Ferriby United.png',
@@ -1207,7 +1208,7 @@ export class CollectionComponent implements OnInit {
             location: 'North Ferriby',
             capacity: 27009,
             league: 'National League North',
-            color: 'National-League-North'
+            color: 'green'
           },
           {
             logo: 'Sunderland.png',
@@ -1216,7 +1217,7 @@ export class CollectionComponent implements OnInit {
             location: 'Hetton-le-Hole',
             capacity: 2000,
             league: 'Womens Super League One',
-            color: 'Womens-Super-League-One'
+            color: '#dda0dd'
           },
           {
             logo: 'The New Saints.png',
@@ -1233,7 +1234,7 @@ export class CollectionComponent implements OnInit {
             location: 'Hertfordshire',
             capacity: 4500,
             league: 'Womens Super League One',
-            color: 'Womens-Super-League-One'
+            color: '#dda0dd'
           },
           {
             logo: 'Aston Villa.png',
@@ -1242,7 +1243,7 @@ export class CollectionComponent implements OnInit {
             location: 'Tamworth',
             capacity: 4813,
             league: 'Womens Super League Two',
-            color: 'Womens-Super-League-Two'
+            color: 'yellow'
           },
           {
             logo: 'Bristol City.png',
@@ -1251,7 +1252,7 @@ export class CollectionComponent implements OnInit {
             location: 'Filton',
             capacity: 1500,
             league: 'Womens Super League Two',
-            color: 'Womens-Super-League-Two'
+            color: 'yellow'
           },
           {
             logo: 'Durham.png',
@@ -1260,7 +1261,7 @@ export class CollectionComponent implements OnInit {
             location: 'Durham',
             capacity: 3000,
             league: 'Womens Super League Two',
-            color: 'Womens-Super-League-Two'
+            color: 'yellow'
           },
           {
             logo: 'Everton.png',
@@ -1269,7 +1270,7 @@ export class CollectionComponent implements OnInit {
             location: 'Widnes',
             capacity: 13350,
             league: 'Womens Super League Two',
-            color: 'Womens-Super-League-Two'
+            color: 'yellow'
           },
           {
             logo: 'London Bees.png',
@@ -1278,7 +1279,7 @@ export class CollectionComponent implements OnInit {
             location: 'Barnet',
             capacity: 5000,
             league: 'Womens Super League Two',
-            color: 'Womens-Super-League-Two'
+            color: 'yellow'
           },
           {
             logo: 'Millwall Lionesses.png',
@@ -1287,7 +1288,7 @@ export class CollectionComponent implements OnInit {
             location: 'Millwall',
             capacity: 20000,
             league: 'Womens Super League Two',
-            color: 'Womens-Super-League-Two'
+            color: 'yellow'
           },
           {
             logo: 'Oxford United.png',
@@ -1296,7 +1297,7 @@ export class CollectionComponent implements OnInit {
             location: 'Oxford',
             capacity: 2000,
             league: 'Womens Super League Two',
-            color: 'Womens-Super-League-Two'
+            color: 'yellow'
           },
           {
             logo: 'Sheffield Wednesday.png',
@@ -1305,7 +1306,7 @@ export class CollectionComponent implements OnInit {
             location: 'Dronfield',
             capacity: 2000,
             league: 'Womens Super League Two',
-            color: 'Womens-Super-League-Two'
+            color: 'yellow'
           },
           {
             logo: 'Watford.png',
@@ -1314,7 +1315,7 @@ export class CollectionComponent implements OnInit {
             location: 'Berkhamsted',
             capacity: 2000,
             league: 'Womens Super League Two',
-            color: 'Womens-Super-League-Two'
+            color: 'yellow'
           },
           {
             logo: 'Yeovil Town.png',
@@ -1323,7 +1324,7 @@ export class CollectionComponent implements OnInit {
             location: 'Sherborne',
             capacity: 9565,
             league: 'Womens Super League Two',
-            color: 'Womens-Super-League-Two'
+            color: 'yellow'
           },
           {
             logo: 'Birmingham City.png',
@@ -1332,7 +1333,7 @@ export class CollectionComponent implements OnInit {
             location: 'Solihull',
             capacity: 3050,
             league: 'Womens Super League One',
-            color: 'Womens-Super-League-One'
+            color: '#dda0dd'
           },
           {
             logo: 'Bristol City.png',
@@ -1341,7 +1342,7 @@ export class CollectionComponent implements OnInit {
             location: 'Filton',
             capacity: 1500,
             league: 'Womens Super League One',
-            color: 'Womens-Super-League-One'
+            color: '#dda0dd'
           },
           {
             logo: 'Everton.png',
@@ -1350,7 +1351,7 @@ export class CollectionComponent implements OnInit {
             location: 'Widnes',
             capacity: 13350,
             league: 'Womens Super League One',
-            color: 'Womens-Super-League-One'
+            color: '#dda0dd'
           },
           {
             logo: 'Reading.png',
@@ -1359,7 +1360,7 @@ export class CollectionComponent implements OnInit {
             location: 'High Wycombe',
             capacity: 9617,
             league: 'Womens Super League One',
-            color: 'Womens-Super-League-One'
+            color: '#dda0dd'
           },
           {
             logo: 'Yeovil Town.png',
@@ -1368,7 +1369,7 @@ export class CollectionComponent implements OnInit {
             location: 'Yeovil',
             capacity: 9565,
             league: 'Womens Super League One',
-            color: 'Womens-Super-League-One'
+            color: '#dda0dd'
           },
           {
             logo: 'Atalanta.png',
@@ -1377,7 +1378,7 @@ export class CollectionComponent implements OnInit {
             location: 'Bergamo',
             capacity: 26542,
             league: 'Serie A',
-            color: 'Serie-A'
+            color: '#9b2d22'
           },
           {
             logo: 'Benevento.png',
@@ -1386,7 +1387,7 @@ export class CollectionComponent implements OnInit {
             location: 'Benevento',
             capacity: 12847,
             league: 'Serie A',
-            color: 'Serie-A'
+            color: '#9b2d22'
           },
           {
             logo: 'Bologna.png',
@@ -1395,7 +1396,7 @@ export class CollectionComponent implements OnInit {
             location: 'Bologna',
             capacity: 38279,
             league: 'Serie A',
-            color: 'Serie-A'
+            color: '#9b2d22'
           },
           {
             logo: 'Cagliari.png',
@@ -1404,7 +1405,7 @@ export class CollectionComponent implements OnInit {
             location: 'Cagliari',
             capacity: 16233,
             league: 'Serie A',
-            color: 'Serie-A'
+            color: '#9b2d22'
           },
           {
             logo: 'Chievo.png',
@@ -1413,7 +1414,7 @@ export class CollectionComponent implements OnInit {
             location: 'Verona',
             capacity: 38402,
             league: 'Serie A',
-            color: 'Serie-A'
+            color: '#9b2d22'
           },
           {
             logo: 'Crotone.png',
@@ -1422,7 +1423,7 @@ export class CollectionComponent implements OnInit {
             location: 'Crotone',
             capacity: 16547,
             league: 'Serie A',
-            color: 'Serie-A'
+            color: '#9b2d22'
           },
           {
             logo: 'Fiorentina.png',
@@ -1431,7 +1432,7 @@ export class CollectionComponent implements OnInit {
             location: 'Florence',
             capacity: 47282,
             league: 'Serie A',
-            color: 'Serie-A'
+            color: '#9b2d22'
           },
           {
             logo: 'Genoa.png',
@@ -1440,7 +1441,7 @@ export class CollectionComponent implements OnInit {
             location: 'Genoa',
             capacity: 36685,
             league: 'Serie A',
-            color: 'Serie-A'
+            color: '#9b2d22'
           },
           {
             logo: 'Hellas Verona.png',
@@ -1449,7 +1450,7 @@ export class CollectionComponent implements OnInit {
             location: 'Verona',
             capacity: 38402,
             league: 'Serie A',
-            color: 'Serie-A'
+            color: '#9b2d22'
           },
           {
             logo: 'Internazionale.png',
@@ -1458,7 +1459,7 @@ export class CollectionComponent implements OnInit {
             location: 'Milan',
             capacity: 80018,
             league: 'Serie A',
-            color: 'Serie-A'
+            color: '#9b2d22'
           },
           {
             logo: 'Juventus.png',
@@ -1467,7 +1468,7 @@ export class CollectionComponent implements OnInit {
             location: 'Turin',
             capacity: 41507,
             league: 'Serie A',
-            color: 'Serie-A'
+            color: '#9b2d22'
           },
           {
             logo: 'Lazio.png',
@@ -1476,7 +1477,7 @@ export class CollectionComponent implements OnInit {
             location: 'Rome',
             capacity: 70634,
             league: 'Serie A',
-            color: 'Serie-A'
+            color: '#9b2d22'
           },
           {
             logo: 'Milan.png',
@@ -1485,7 +1486,7 @@ export class CollectionComponent implements OnInit {
             location: 'Milan',
             capacity: 80018,
             league: 'Serie A',
-            color: 'Serie-A'
+            color: '#9b2d22'
           },
           {
             logo: 'Napoli.png',
@@ -1494,7 +1495,7 @@ export class CollectionComponent implements OnInit {
             location: 'Naples',
             capacity: 60240,
             league: 'Serie A',
-            color: 'Serie-A'
+            color: '#9b2d22'
           },
           {
             logo: 'Roma.png',
@@ -1503,7 +1504,7 @@ export class CollectionComponent implements OnInit {
             location: 'Rome',
             capacity: 70634,
             league: 'Serie A',
-            color: 'Serie-A'
+            color: '#9b2d22'
           },
           {
             logo: 'Sampdoria.png',
@@ -1512,7 +1513,7 @@ export class CollectionComponent implements OnInit {
             location: 'Genoa',
             capacity: 36685,
             league: 'Serie A',
-            color: 'Serie-A'
+            color: '#9b2d22'
           },
           {
             logo: 'Sassuolo.png',
@@ -1521,7 +1522,7 @@ export class CollectionComponent implements OnInit {
             location: 'Sassuolo',
             capacity: 23717,
             league: 'Serie A',
-            color: 'Serie-A'
+            color: '#9b2d22'
           },
           {
             logo: 'SPAL.png',
@@ -1530,7 +1531,7 @@ export class CollectionComponent implements OnInit {
             location: 'Ferrara',
             capacity: 12348,
             league: 'Serie A',
-            color: 'Serie-A'
+            color: '#9b2d22'
           },
           {
             logo: 'Torino.png',
@@ -1539,7 +1540,7 @@ export class CollectionComponent implements OnInit {
             location: 'Turin',
             capacity: 27994,
             league: 'Serie A',
-            color: 'Serie-A'
+            color: '#9b2d22'
           },
           {
             logo: 'Udinese.png',
@@ -1548,7 +1549,7 @@ export class CollectionComponent implements OnInit {
             location: 'Udine',
             capacity: 25144,
             league: 'Serie A',
-            color: 'Serie-A'
+            color: '#9b2d22'
           },
           {
             logo: 'Augsburg.png',
@@ -1557,7 +1558,7 @@ export class CollectionComponent implements OnInit {
             location: 'Augsburg',
             capacity: 30660,
             league: 'Bundesliga',
-            color: 'Bundesliga'
+            color: '#5962a0'
           },
           {
             logo: 'Bayer Leverkusen.png',
@@ -1566,7 +1567,7 @@ export class CollectionComponent implements OnInit {
             location: 'Leverkusen',
             capacity: 30210,
             league: 'Bundesliga',
-            color: 'Bundesliga'
+            color: '#5962a0'
           },
           {
             logo: 'Bayern Munich.png',
@@ -1575,7 +1576,7 @@ export class CollectionComponent implements OnInit {
             location: 'Munich',
             capacity: 75000,
             league: 'Bundesliga',
-            color: 'Bundesliga'
+            color: '#5962a0'
           },
           {
             logo: 'Borussia Dortmund.png',
@@ -1584,7 +1585,7 @@ export class CollectionComponent implements OnInit {
             location: 'Dortmund',
             capacity: 81360,
             league: 'Bundesliga',
-            color: 'Bundesliga'
+            color: '#5962a0'
           },
           {
             logo: 'Borussia Monchengladbach.png',
@@ -1593,7 +1594,7 @@ export class CollectionComponent implements OnInit {
             location: 'Mönchengladbach',
             capacity: 54057,
             league: 'Bundesliga',
-            color: 'Bundesliga'
+            color: '#5962a0'
           },
           {
             logo: 'Darmstadt 98.png',
@@ -1602,7 +1603,7 @@ export class CollectionComponent implements OnInit {
             location: 'Darmstadt',
             capacity: 17000,
             league: 'Bundesliga',
-            color: 'Bundesliga'
+            color: '#5962a0'
           },
           {
             logo: 'Eintracht Frankfurt.png',
@@ -1611,7 +1612,7 @@ export class CollectionComponent implements OnInit {
             location: 'Frankfurt',
             capacity: 51500,
             league: 'Bundesliga',
-            color: 'Bundesliga'
+            color: '#5962a0'
           },
           {
             logo: 'SC Freiburg.png',
@@ -1620,7 +1621,7 @@ export class CollectionComponent implements OnInit {
             location: 'Freiburg im Breisgau',
             capacity: 24000,
             league: 'Bundesliga',
-            color: 'Bundesliga'
+            color: '#5962a0'
           },
           {
             logo: 'Hamburger SV.png',
@@ -1629,7 +1630,7 @@ export class CollectionComponent implements OnInit {
             location: 'Hamburg',
             capacity: 57000,
             league: 'Bundesliga',
-            color: 'Bundesliga'
+            color: '#5962a0'
           },
           {
             logo: 'Hertha BSC.png',
@@ -1638,7 +1639,7 @@ export class CollectionComponent implements OnInit {
             location: 'Berlin',
             capacity: 74475,
             league: 'Bundesliga',
-            color: 'Bundesliga'
+            color: '#5962a0'
           },
           {
             logo: '1899Hoffenheim.png',
@@ -1647,7 +1648,7 @@ export class CollectionComponent implements OnInit {
             location: 'Sinsheim',
             capacity: 30150,
             league: 'Bundesliga',
-            color: 'Bundesliga'
+            color: '#5962a0'
           },
           {
             logo: 'FC Ingolstadt.png',
@@ -1656,7 +1657,7 @@ export class CollectionComponent implements OnInit {
             location: 'Ingolstadt',
             capacity: 15000,
             league: 'Bundesliga',
-            color: 'Bundesliga'
+            color: '#5962a0'
           },
           {
             logo: 'FC Koln.png',
@@ -1665,7 +1666,7 @@ export class CollectionComponent implements OnInit {
             location: 'Cologne',
             capacity: 49968,
             league: 'Bundesliga',
-            color: 'Bundesliga'
+            color: '#5962a0'
           },
           {
             logo: 'RB Leipzig.png',
@@ -1674,7 +1675,7 @@ export class CollectionComponent implements OnInit {
             location: 'Leipzig',
             capacity: 42959,
             league: 'Bundesliga',
-            color: 'Bundesliga'
+            color: '#5962a0'
           },
           {
             logo: 'Mainz 05.png',
@@ -1683,7 +1684,7 @@ export class CollectionComponent implements OnInit {
             location: 'Mainz',
             capacity: 34000,
             league: 'Bundesliga',
-            color: 'Bundesliga'
+            color: '#5962a0'
           },
           {
             logo: 'Schalke 04.png',
@@ -1692,7 +1693,7 @@ export class CollectionComponent implements OnInit {
             location: 'Gelsenkirchen',
             capacity: 62271,
             league: 'Bundesliga',
-            color: 'Bundesliga'
+            color: '#5962a0'
           },
           {
             logo: 'Werder Bremen.png',
@@ -1701,7 +1702,7 @@ export class CollectionComponent implements OnInit {
             location: 'Bremen',
             capacity: 42100,
             league: 'Bundesliga',
-            color: 'Bundesliga'
+            color: '#5962a0'
           },
           {
             logo: 'VfL Wolfsburg.png',
@@ -1710,7 +1711,7 @@ export class CollectionComponent implements OnInit {
             location: 'Wolfsburg',
             capacity: 30000,
             league: 'Bundesliga',
-            color: 'Bundesliga'
+            color: '#5962a0'
           },
           {
             logo: 'Alfreton Town.png',
@@ -1719,7 +1720,7 @@ export class CollectionComponent implements OnInit {
             location: 'Alfreton',
             capacity: 3600,
             league: 'National League North',
-            color: 'National-League-North'
+            color: 'green'
           },
           {
             logo: 'Blyth Spartans.png',
@@ -1728,7 +1729,7 @@ export class CollectionComponent implements OnInit {
             location: 'Blyth',
             capacity: 4435,
             league: 'National League North',
-            color: 'National-League-North'
+            color: 'green'
           },
           {
             logo: 'Brackley Town.png',
@@ -1737,7 +1738,7 @@ export class CollectionComponent implements OnInit {
             location: 'Brackley',
             capacity: 3500,
             league: 'National League North',
-            color: 'National-League-North'
+            color: 'green'
           },
           {
             logo: 'Bradford Park Avenue.png',
@@ -1746,7 +1747,7 @@ export class CollectionComponent implements OnInit {
             location: 'Bradford',
             capacity: 3500,
             league: 'National League North',
-            color: 'National-League-North'
+            color: 'green'
           },
           {
             logo: 'Chorley.png',
@@ -1755,7 +1756,7 @@ export class CollectionComponent implements OnInit {
             location: 'Chorley',
             capacity: 4100,
             league: 'National League North',
-            color: 'National-League-North'
+            color: 'green'
           },
           {
             logo: 'Curzon Ashton.png',
@@ -1764,7 +1765,7 @@ export class CollectionComponent implements OnInit {
             location: 'Ashton-under-Lyne',
             capacity: 4000,
             league: 'National League North',
-            color: 'National-League-North'
+            color: 'green'
           },
           {
             logo: 'Darlington 1883.png',
@@ -1773,7 +1774,7 @@ export class CollectionComponent implements OnInit {
             location: 'Darlington',
             capacity: 3300,
             league: 'National League North',
-            color: 'National-League-North'
+            color: 'green'
           },
           {
             logo: 'United of Manchester.png',
@@ -1782,7 +1783,7 @@ export class CollectionComponent implements OnInit {
             location: 'Manchester',
             capacity: 4400,
             league: 'National League North',
-            color: 'National-League-North'
+            color: 'green'
           },
           {
             logo: 'Gainsborough Trinity.png',
@@ -1800,7 +1801,7 @@ export class CollectionComponent implements OnInit {
             location: 'Harrogate',
             capacity: 2800,
             league: 'National League North',
-            color: 'National-League-North'
+            color: 'green'
           },
           {
             logo: 'Leamington.png',
@@ -1809,7 +1810,7 @@ export class CollectionComponent implements OnInit {
             location: 'Whitnash',
             capacity: 5000,
             league: 'National League North',
-            color: 'National-League-North'
+            color: 'green'
           },
           {
             logo: 'Nuneaton Town.png',
@@ -1818,7 +1819,7 @@ export class CollectionComponent implements OnInit {
             location: 'Warwickshire',
             capacity: 4500,
             league: 'National League North',
-            color: 'National-League-North'
+            color: 'green'
           },
           {
             logo: 'Salford City.png',
@@ -1827,7 +1828,7 @@ export class CollectionComponent implements OnInit {
             location: 'Salford',
             capacity: 3900,
             league: 'National League North',
-            color: 'National-League-North'
+            color: 'green'
           },
           {
             logo: 'Salford City.png',
@@ -1836,7 +1837,7 @@ export class CollectionComponent implements OnInit {
             location: 'Spennymoor',
             capacity: 3000,
             league: 'National League North',
-            color: 'National-League-North'
+            color: 'green'
           },
           {
             logo: 'Tamworth.png',
@@ -1845,7 +1846,7 @@ export class CollectionComponent implements OnInit {
             location: 'Kettlebrook',
             capacity: 4565,
             league: 'National League North',
-            color: 'National-League-North'
+            color: 'green'
           },
           {
             logo: 'Bognor Regis Town.png',
@@ -1854,7 +1855,7 @@ export class CollectionComponent implements OnInit {
             location: 'Bognor Regis',
             capacity: 4500,
             league: 'National League South',
-            color: 'National-League-South'
+            color: '#ebb3f2'
           },
           {
             logo: 'Chelmsford City.png',
@@ -1863,7 +1864,7 @@ export class CollectionComponent implements OnInit {
             location: 'Chelmsford',
             capacity: 3000,
             league: 'National League South',
-            color: 'National-League-South'
+            color: '#ebb3f2'
           },
           {
             logo: 'Chippenham Town.png',
@@ -1872,7 +1873,7 @@ export class CollectionComponent implements OnInit {
             location: 'Chippenham',
             capacity: 3000,
             league: 'National League South',
-            color: 'National-League-South'
+            color: '#ebb3f2'
           },
           {
             logo: 'Concord Rangers.png',
@@ -1881,7 +1882,7 @@ export class CollectionComponent implements OnInit {
             location: 'Canvey Island',
             capacity: 3300,
             league: 'National League South',
-            color: 'National-League-South'
+            color: '#ebb3f2'
           },
           {
             logo: 'Dartford.png',
@@ -1890,7 +1891,7 @@ export class CollectionComponent implements OnInit {
             location: 'Dartford',
             capacity: 4100,
             league: 'National League South',
-            color: 'National-League-South'
+            color: '#ebb3f2'
           },
           {
             logo: 'East Thurrock United.png',
@@ -1899,7 +1900,7 @@ export class CollectionComponent implements OnInit {
             location: 'Corringham',
             capacity: 3500,
             league: 'National League South',
-            color: 'National-League-South'
+            color: '#ebb3f2'
           },
           {
             logo: 'Eastbourne Borough.png',
@@ -1908,7 +1909,7 @@ export class CollectionComponent implements OnInit {
             location: 'Langney',
             capacity: 4151,
             league: 'National League South',
-            color: 'National-League-South'
+            color: '#ebb3f2'
           },
           {
             logo: 'Gloucester City.png',
@@ -1917,7 +1918,7 @@ export class CollectionComponent implements OnInit {
             location: 'Evesham',
             capacity: 3000,
             league: 'National League South',
-            color: 'National-League-South'
+            color: '#ebb3f2'
           },
           {
             logo: 'Hampton & Richmond Borough.png',
@@ -1926,7 +1927,7 @@ export class CollectionComponent implements OnInit {
             location: 'Hampton',
             capacity: 3500,
             league: 'National League South',
-            color: 'National-League-South'
+            color: '#ebb3f2'
           },
           {
             logo: 'Hemel Hempstead Town.png',
@@ -1935,7 +1936,7 @@ export class CollectionComponent implements OnInit {
             location: 'Vauxhall Road',
             capacity: 3152,
             league: 'National League South',
-            color: 'National-League-South'
+            color: '#ebb3f2'
           },
           {
             logo: 'Hungerford Town.png',
@@ -1944,7 +1945,7 @@ export class CollectionComponent implements OnInit {
             location: 'Hungerford',
             capacity: 2500,
             league: 'National League South',
-            color: 'National-League-South'
+            color: '#ebb3f2'
           },
           {
             logo: 'Oxford City.png',
@@ -1953,7 +1954,7 @@ export class CollectionComponent implements OnInit {
             location: 'Marston',
             capacity: 3218,
             league: 'National League South',
-            color: 'National-League-South'
+            color: '#ebb3f2'
           },
           {
             logo: 'Poole Town.png',
@@ -1962,7 +1963,7 @@ export class CollectionComponent implements OnInit {
             location: 'Poole',
             capacity: 2500,
             league: 'National League South',
-            color: 'National-League-South'
+            color: '#ebb3f2'
           },
           {
             logo: 'St Albans City.png',
@@ -1971,7 +1972,7 @@ export class CollectionComponent implements OnInit {
             location: 'St Albans',
             capacity: 6000,
             league: 'National League South',
-            color: 'National-League-South'
+            color: '#ebb3f2'
           },
           {
             logo: 'Truro City.png',
@@ -1980,7 +1981,7 @@ export class CollectionComponent implements OnInit {
             location: 'Truro',
             capacity: 3800,
             league: 'National League South',
-            color: 'National-League-South'
+            color: '#ebb3f2'
           },
           {
             logo: 'Wealdstone.png',
@@ -1989,7 +1990,7 @@ export class CollectionComponent implements OnInit {
             location: 'Ruislip',
             capacity: 3607,
             league: 'National League South',
-            color: 'National-League-South'
+            color: '#ebb3f2'
           },
           {
             logo: 'Welling United.png',
@@ -1998,7 +1999,7 @@ export class CollectionComponent implements OnInit {
             location: 'Welling',
             capacity: 4000,
             league: 'National League South',
-            color: 'National-League-South'
+            color: '#ebb3f2'
           },
           {
             logo: 'Weston-super-Mare.png',
@@ -2007,7 +2008,7 @@ export class CollectionComponent implements OnInit {
             location: 'Weston-super-Mare',
             capacity: 3500,
             league: 'National League South',
-            color: 'National-League-South'
+            color: '#ebb3f2'
           },
           {
             logo: 'Whitehawk.png',
@@ -2016,7 +2017,7 @@ export class CollectionComponent implements OnInit {
             location: 'Whitehawk',
             capacity: 2175,
             league: 'National League South',
-            color: 'National-League-South'
+            color: '#ebb3f2'
           },
           {
             logo: 'AFC Fylde.png',
@@ -2025,7 +2026,7 @@ export class CollectionComponent implements OnInit {
             location: 'Wesham',
             capacity: 6000,
             league: 'National League',
-            color: 'National-League'
+            color: 'orange'
           },
           {
             logo: 'Maidenhead United.png',
@@ -2034,7 +2035,7 @@ export class CollectionComponent implements OnInit {
             location: 'Maidenhead',
             capacity: 4000,
             league: 'National League',
-            color: 'National-League'
+            color: 'orange'
           },
           {
             logo: 'Alaves.png',
@@ -2043,7 +2044,7 @@ export class CollectionComponent implements OnInit {
             location: 'Vitoria-Gasteiz',
             capacity: 19840,
             league: 'La Liga',
-            color: 'La-Liga'
+            color: '#e0c653'
           },
           {
             logo: 'Athletic Bilbao.png',
@@ -2052,7 +2053,7 @@ export class CollectionComponent implements OnInit {
             location: 'Bilbao',
             capacity: 53289,
             league: 'La Liga',
-            color: 'La-Liga'
+            color: '#e0c653'
           },
           {
             logo: 'Atletico Madrid.png',
@@ -2061,7 +2062,7 @@ export class CollectionComponent implements OnInit {
             location: 'Madrid',
             capacity: 67703,
             league: 'La Liga',
-            color: 'La-Liga'
+            color: '#e0c653'
           },
           {
             logo: 'Barcelona.png',
@@ -2070,7 +2071,7 @@ export class CollectionComponent implements OnInit {
             location: 'Barcelona',
             capacity: 99354,
             league: 'La Liga',
-            color: 'La-Liga'
+            color: '#e0c653'
           },
           {
             logo: 'Celta Vigo.png',
@@ -2079,7 +2080,7 @@ export class CollectionComponent implements OnInit {
             location: 'Vigo',
             capacity: 29000,
             league: 'La Liga',
-            color: 'La-Liga'
+            color: '#e0c653'
           },
           {
             logo: 'Deportivo La Coruna.png',
@@ -2088,7 +2089,7 @@ export class CollectionComponent implements OnInit {
             location: 'A Coruna',
             capacity: 32912,
             league: 'La Liga',
-            color: 'La-Liga'
+            color: '#e0c653'
           },
           {
             logo: 'Eibar.png',
@@ -2097,7 +2098,7 @@ export class CollectionComponent implements OnInit {
             location: 'Eibar',
             capacity: 7083,
             league: 'La Liga',
-            color: 'La-Liga'
+            color: '#e0c653'
           },
           {
             logo: 'Espanyol.png',
@@ -2106,7 +2107,7 @@ export class CollectionComponent implements OnInit {
             location: 'Barcelona',
             capacity: 40500,
             league: 'La Liga',
-            color: 'La-Liga'
+            color: '#e0c653'
           },
           {
             logo: 'Getafe.png',
@@ -2115,7 +2116,7 @@ export class CollectionComponent implements OnInit {
             location: 'Getafe',
             capacity: 17000,
             league: 'La Liga',
-            color: 'La-Liga'
+            color: '#e0c653'
           },
           {
             logo: 'Girona.png',
@@ -2124,7 +2125,7 @@ export class CollectionComponent implements OnInit {
             location: 'Girona',
             capacity: 13500,
             league: 'La Liga',
-            color: 'La-Liga'
+            color: '#e0c653'
           },
           {
             logo: 'Las Palmas.png',
@@ -2133,7 +2134,7 @@ export class CollectionComponent implements OnInit {
             location: 'Las Palmas',
             capacity: 32400,
             league: 'La Liga',
-            color: 'La-Liga'
+            color: '#e0c653'
           },
           {
             logo: 'Leganes.png',
@@ -2142,7 +2143,7 @@ export class CollectionComponent implements OnInit {
             location: 'Leganes',
             capacity: 11454,
             league: 'La Liga',
-            color: 'La-Liga'
+            color: '#e0c653'
             },
             {
             logo: 'Levante.png',
@@ -2151,7 +2152,7 @@ export class CollectionComponent implements OnInit {
             location: 'Valencia',
             capacity: 26354,
             league: 'La Liga',
-            color: 'La-Liga'
+            color: '#e0c653'
             },
             {
             logo: 'Malaga.png',
@@ -2160,7 +2161,7 @@ export class CollectionComponent implements OnInit {
             location: 'Malaga',
             capacity: 30044,
             league: 'La Liga',
-            color: 'La-Liga'
+            color: '#e0c653'
             },
             {
             logo: 'Real Betis.png',
@@ -2169,7 +2170,7 @@ export class CollectionComponent implements OnInit {
             location: 'Seville',
             capacity: 60720,
             league: 'La Liga',
-            color: 'La-Liga'
+            color: '#e0c653'
             },
             {
             logo: 'Real Madrid.png',
@@ -2178,7 +2179,7 @@ export class CollectionComponent implements OnInit {
             location: 'Madrid',
             capacity: 81044,
             league: 'La Liga',
-            color: 'La-Liga'
+            color: '#e0c653'
             },
             {
             logo: 'Real Sociedad.png',
@@ -2187,7 +2188,7 @@ export class CollectionComponent implements OnInit {
             location: 'San Sebastian',
             capacity: 32000,
             league: 'La Liga',
-            color: 'La-Liga'
+            color: '#e0c653'
             },
             {
             logo: 'Sevilla.png',
@@ -2196,7 +2197,7 @@ export class CollectionComponent implements OnInit {
             location: 'Seville',
             capacity: 42714,
             league: 'La Liga',
-            color: 'La-Liga'
+            color: '#e0c653'
             },
             {
             logo: 'Valencia.png',
@@ -2205,7 +2206,7 @@ export class CollectionComponent implements OnInit {
             location: 'Valencia',
             capacity: 49500,
             league: 'La Liga',
-            color: 'La-Liga'
+            color: '#e0c653'
             },
             {
             logo: 'Villarreal.png',
@@ -2214,7 +2215,7 @@ export class CollectionComponent implements OnInit {
             location: 'Villarreal',
             capacity: 24890,
             league: 'La Liga',
-            color: 'La-Liga'
+            color: '#e0c653'
             },
             {
             logo: 'Angers.png',
