@@ -21,13 +21,13 @@ ul {
 }
 
 .custom-card {
-	border: 5px solid #af4b60;
+  border: 5px solid #af4b60;
   -webkit-background-clip: padding-box; /* for Safari */
   background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
   background: rgba(53, 53, 84, 0.80);
   transition: 0.5s;
   border-radius: 10px;
-	color: white;
+  color: white;
 }
 
 .custom-card:hover {
@@ -87,7 +87,7 @@ ul {
   margin-right: 4px;
 }
 
-.leauge-container {
+.league-container {
 	background: rgba(21, 21, 21, 0.95);
 	width: auto;
 	border-radius: 5px;

@@ -7,6 +7,7 @@ import { CollectionComponent } from './components/collection/collection.componen
 import { FiltersComponent } from './components/filters/filters.component';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './filter.pipe';
+import { LeaguefilterPipe } from './leaugefilter.pipe';
 
 
 
@@ -18,6 +19,7 @@ import { FilterPipe } from './filter.pipe';
     CollectionComponent,
     FiltersComponent,
     FilterPipe,
+    LeaguefilterPipe,
   ],
   imports: [
     BrowserModule,

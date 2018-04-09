@@ -1,7 +1,9 @@
 import { Component, Pipe, PipeTransform, OnInit } from '@angular/core';
 import { Club } from '../../modles/Clubs';
+import { League } from '../../modles/Leagues';
 import { NgModel } from '@angular/forms';
 import { FilterPipe } from '../../filter.pipe';
+import { LeaguefilterPipe } from '../../leaugefilter.pipe';
 import { NgClass } from '@angular/common';
 
 @Component({
@@ -11,14 +13,34 @@ import { NgClass } from '@angular/common';
 })
 export class CollectionComponent implements OnInit {
   clubs: Club[];
+  leagues: League[];
+  
 
   constructor() {
    }
 
   ngOnInit() {
+    // List of Leagues
+    this.leagues = [
+      {name: 'Championship', value: 'Championship', checked: false},
+      {name: 'Premier League', value: 'Premier League', checked: false},
+      {name: 'League One', value: 'League One', checked: false},
+      {name: 'League Two ', value: 'League Two ', checked: false},
+      {name: 'National League', value: 'National League', checked: false},
+      {name: 'National League North', value: 'National League North', checked: false},
+      {name: 'National League South ', value: 'National League South ', checked: false},
+      {name: 'Northern Premier League', value: 'Northern Premier League', checked: false},
+      {name: 'Womens Super League One', value: 'Womens Super League One', checked: false},
+      {name: 'Womens Super League Two', value: 'Womens Super League Two', checked: false},
+      {name: 'Serie A ', value: 'Serie A ', checked: false},
+      {name: 'Bundesliga ', value: 'Bundesliga ', checked: false},
+      {name: 'La Liga ', value: 'La Liga ', checked: false} 
+    ]
+
+    // List of clubs and their data
     this.clubs =
     [
-       {
+          {
             logo: 'Tottenham Hotspur.png',
             name: 'Tottenham Hotspur',
             ground: 'Wembley Stadium',
@@ -2399,5 +2421,11 @@ export class CollectionComponent implements OnInit {
             }
     ]
 
+    this.clubs; {
+    return this.leagues
+              .filter(leagues => leagues.checked)
+              .map(league => league.value)
   }
+  }
+
 }

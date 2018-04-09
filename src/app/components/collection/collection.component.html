@@ -1,136 +1,18 @@
 <div class="col-md-12">
- <div class="button">
-      <label>
-     <input class="checkbox" type="checkbox">
-       <span>
-           <i class="fa fa-filter" aria-hidden="true"></i>
-         Championship
-       </span>
-   </label>
- </div>
- <div class="button">
-   <label>
-     <input class="checkbox" type="checkbox">
-       <span>
-           <i class="fa fa-filter" aria-hidden="true"></i>
-         Premier League
-       </span>
-   </label>
- </div>
- <div class="button">
-   <label>
-     <input class="checkbox" type="checkbox">
-       <span>
-           <i class="fa fa-filter" aria-hidden="true"></i>
-         League One
-       </span>
-   </label>
- </div>
- <div class="button">
-   <label>
-     <input class="checkbox" type="checkbox">
-       <span>
-           <i class="fa fa-filter" aria-hidden="true"></i>
-         League Two
-       </span>
-   </label>
- </div>
- <div class="button">
-   <label>
-     <input class="checkbox" type="checkbox">
-       <span>
-           <i class="fa fa-filter" aria-hidden="true"></i>
-         National League
-       </span>
-   </label>
- </div>
- <div class="button">
-   <label>
-     <input class="checkbox" type="checkbox">
-       <span>
-           <i class="fa fa-filter" aria-hidden="true"></i>
-         National League North
-       </span>
-   </label>
- </div>
- <div class="button">
-   <label>
-     <input class="checkbox" type="checkbox">
-       <span>
-           <i class="fa fa-filter" aria-hidden="true"></i>
-         National League South
-       </span>
-   </label>
- </div>
- <div class="button">
-   <label>
-     <input class="checkbox" type="checkbox">
-       <span>
-           <i class="fa fa-filter" aria-hidden="true"></i>
-         Northern Premier League
-       </span>
-   </label>
- </div>
- <div class="button">
-   <label>
-     <input class="checkbox" type="checkbox">
-       <span>
-           <i class="fa fa-filter" aria-hidden="true"></i>
-         Womens Super League One
-       </span>
-   </label>
- </div>
- <div class="button">
-   <label>
-     <input class="checkbox" type="checkbox">
-       <span>
-           <i class="fa fa-filter" aria-hidden="true"></i>
-         Womens Super League Two
-       </span>
-   </label>
- </div>
- <div class="button">
-   <label>
-     <input class="checkbox" type="checkbox">
-       <span>
-           <i class="fa fa-filter" aria-hidden="true"></i>
-         Serie A
-       </span>
-   </label>
- </div>
- <div class="button">
-   <label>
-     <input class="checkbox" type="checkbox">
-       <span>
-           <i class="fa fa-filter" aria-hidden="true"></i>
-         Bundesliga
-       </span>
-   </label>
- </div>
- <div class="button">
-   <label>
-     <input class="checkbox" type="checkbox">
-       <span>
-           <i class="fa fa-filter" aria-hidden="true"></i>
-         La Liga
-       </span>
-   </label>
- </div>
- <div class="button">
-   <label>
-     <input class="checkbox" type="checkbox">
-       <span>
-           <i class="fa fa-filter" aria-hidden="true"></i>
-         Ligue 1
-       </span>
-   </label>
- </div>
+    <div class="button" *ngFor="let league of leagues">
+         <label>
+        <input class="checkbox" type="checkbox" value="{{league.value}}" ref-league.name  name="leagues">
+          <span>
+              <i class="fa fa-filter" aria-hidden="true"></i>
+            {{league.name}}
+          </span>
+      </label>
+    </div>
 </div>
-
 
   <input class="search" type="text" [(ngModel)]="term" placeholder="Search for a team name">
 <div class="row">
-  <div (click)="club.hide = !club.hide" class="card custom-card col-4" *ngFor="let club of clubs | filter:term">
+  <div (click)="club.hide = !club.hide" class="card custom-card col-md-4 col-sm-6" *ngFor="let club of clubs | filter:term">
         <img class="clublogo" src="../../../assets/img/{{club.logo}}" alt="{{club.logo}}">
     <h1>{{club.name}}</h1>
     <div *ngIf="!club.hide">
@@ -138,6 +20,6 @@
         <li><i class="fa fa-home staduim-icon"></i> {{club.ground}}</li>
         <li><i class="fa fa-map-marker location-icon"></i> {{club.location}}</li>
         <li><i class="fa fa-user capacity-icon"></i> {{club.capacity | number }}</li>
-        <li class="leauge-container" [ngStyle]="{'color': club.color}"><i class="fa fa-trophy league"></i> {{club.league}}</li>
+        <li class="league-container" [ngStyle]="{'color': club.color}"><i class="fa fa-trophy league"></i> {{club.league}}</li>
       </ul>
     </div>
